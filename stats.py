@@ -1,4 +1,5 @@
 def get_book_text(file):
+
     with open(file) as f:
         file_contents = f.read()
     
@@ -23,3 +24,25 @@ def character_count(file):
             character_count[character] += 1
     
     return character_count
+
+def sort_on(items):
+    return items["num"]
+
+def sort_result(dict):
+    character_list = []
+    #convert dict to list of dictionarys to use .sort() method
+    for item in dict:
+        character_list.append({"character": item, "num": dict[item]})
+    
+    character_list.sort(reverse=True, key=sort_on)
+
+    
+    #print character and num of character list
+    for i in character_list:
+       if i["character"].isalpha():
+           print(f"{i["character"]}: {i["num"]}") 
+
+
+    
+
+   #print(character_list)
