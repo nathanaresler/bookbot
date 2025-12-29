@@ -41,8 +41,3 @@ def sort_result(dict):
     for i in character_list:
        if i["character"].isalpha():
            print(f"{i["character"]}: {i["num"]}") 
-
-
-    
-
-   #print(character_list)
